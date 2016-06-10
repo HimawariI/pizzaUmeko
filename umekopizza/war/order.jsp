@@ -71,6 +71,7 @@
                     </pre></td></tr>
             </table>
             <table>
+            <tr><td>お名前:</td><td><input type="text" name="userName"></td></tr>
                 <tr><td>マルゲリータ:</td><td><input type="text" name="pizza1">枚×1500円</td></tr>
                 <tr><td>照り焼きチキン:</td><td><input type="text" name="pizza2">枚×2300円</td></tr>
                 <tr><td>シーフード:</td><td><input type="text" name="pizza3">枚×2700円</td></tr>
@@ -79,7 +80,7 @@
                 <tr><td>うめこおばさんの気まぐれピザ:</td><td><input type="text" name="pizza6">枚×3200円</td></tr>
             </table>
 
-
+			<input type="hidden" id="id" name="id">
             <input type="submit" value="注文確認">
         </form>
        

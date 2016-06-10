@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class MyGae extends HttpServlet {
+public class PizzaGAE extends HttpServlet {
 private static final long serialVersionUID = 1L;
   
 
@@ -27,24 +27,27 @@ private static final long serialVersionUID = 1L;
         request.setCharacterEncoding("utf-8");
         String param1 = request.getParameter("id");
         PrintWriter out = response.getWriter();
-        List<Kutikomi> list = null;
+        List<Pizza> list = null;
         if (param1 == null || param1 ==""){
-            String query = "select from " + Kutikomi.class.getName();
+            String query = "select from " + Pizza.class.getName();
             try {
-                list = (List<Kutikomi>)manager.newQuery(query).execute();
+                list = (List<Pizza>)manager.newQuery(query).execute();
             } catch(JDOObjectNotFoundException e){}
         } else {
             try {
-                Kutikomi data = (Kutikomi)manager.getObjectById(Kutikomi.class,Long.parseLong(param1));
+                Pizza data = (Pizza)manager.getObjectById(Pizza.class,Long.parseLong(param1));
                 list = new ArrayList();
                 list.add(data);
             } catch(JDOObjectNotFoundException e){}
         }
         String res = "[";
         if (list != null){
-            for(Kutikomi data:list){
+            for(Pizza data:list){
                 res += "{id:" + data.getId() + ",name:'" + data.getUserName() +
-                    "',review:'" + data.getReview() + "'},";//",'date:'" + data.getDatetime() + "'},";
+                    "',pizza1:'" + data.getPizza1() +",'pizza2:'" + data.getPizza2() +
+                    "',pizza3:'" + data.getPizza3() +",'pizza4:'" + data.getPizza4() +
+                    "',pizza5:'" + data.getPizza5() +",'pizza6:'" + data.getPizza6() +
+                    "',sum:'" + data.getSum() + "'},";
             }
         }
         res += "]";

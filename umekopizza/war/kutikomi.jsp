@@ -11,15 +11,15 @@
             var res = '';
             if (json.length == 1){
                 res += '<tr><td>' + json[0].id +'</td></tr>';
-                res += '<tr><td>' + json[0].title +'</td></tr>';
-                res += '<tr><td>' + json[0].url +'</td></tr>';
-                res += '<tr><td>' + json[0].comment +'</td></tr>';
+                res += '<tr><td>' + json[0].name +'</td></tr>';
+                res += '<tr><td>' + json[0].review +'</td></tr>';
             } else {
                 for (var i = 0;i < json.length;i++){
-                    res += '<tr><td><a href="javascript:return false;" onclick="getData(' + json[i].id +');">' + json[i].id + '</a></td>';
-                    res += '<td><a href="' + json[i].url + '">' + json[i].title + '</a></td>' +
-                    //'<td><a href="edit.html?id=' + json[i].id + '">Edit</td>' +
-                    //'<td><a href="del.html?id=' + json[i].id + '">Delete</td></tr>';
+                    res += '<tr><td>' + (i+1) + '</td>';
+                    res += '<td>' + json[i].name + '</td>' +
+                    '<td>' + json[i].review + '</td>' +
+                    '<td><a href="edit.html?id=' + json[i].id + '">Edit</td>' +
+                    '<td><a href="del.html?id=' + json[i].id + '">Delete</td></tr>';
                 }
             }
             var obj = document.getElementById("datatable");
@@ -40,18 +40,14 @@
       <font face="HG丸ｺﾞｼｯｸM-PRO" size="3" color ="cornsilk">
         <p>
         <p>あなたのご意見やご感想を教えてください</p>
-        <a href="/pizzashopgae">トップへ</a>
+        <a href="/loginOK.jsp">トップへ</a>
     </p>
-    <p><a href="/kutikomi">更新</a></p>
+    <!--<p><a href="/kutikomi">更新</a></p>-->
     <form action="/add" method="post">
-        <p>ニックネーム:<input type="text" name="title"></p>
-        <p><textarea name="comment" cols="40" rows="10"></textarea></p>
+        <p>ニックネーム:<input type="text" name="name"></p>
+        <p><textarea name="review" cols="40" rows="10"></textarea></p>
         <input type="submit" value="投稿">
     </form>
-
-
-
-
 
       <table id="datatable" border="1">
  　　　<tr>

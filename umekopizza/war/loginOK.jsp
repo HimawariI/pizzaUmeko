@@ -9,8 +9,8 @@
        <body bgcolor ="tomato">
           <font face="HG丸ｺﾞｼｯｸM-PRO" color ="cornsilk"> 
            <h3><p>うめこおばさんのピザへようこそ!!</p></h3>
+           <p>ログイン完了しました！以下のリンクから注文画面へ進んでください。</p>
         <a href="pizzashopgae">注文画面へ</a>
-        <a href="/ad4145/KutikomiServlet">口コミ投稿へ</a>
         </font>
     </body>
 </html>

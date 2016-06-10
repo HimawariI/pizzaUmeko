@@ -7,8 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        
+    <head>  
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
           <title>うめこおばさんのピザ</title>
     </head>
@@ -17,7 +16,7 @@
         <p>注文が完了しました。</p>
         <p>30分以内にあつあつのピザをお届けします。</p>
         <p>またのご利用をお待ちしています。</p>
-        <a href="/ad4145/Logout">ログアウト</a>
+        <a href="/logout">ログアウト</a>
         </font>
     </body>
 </html>

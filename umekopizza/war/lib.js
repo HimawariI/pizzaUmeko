@@ -30,6 +30,24 @@ function getData(id){
     }
     request.send();
 }
+
+function getData2(id){
+    var request = createHttpRequest();
+    if (request == null){
+        alert("HttpRequestが取得できませんでした。");
+        return;
+    }
+    var uri = "/pizzagae";
+    if (id != null) uri = "/pizzagae?id=" + id;
+    request.open("GET",uri,true);
+    request.setRequestHeader("User-Agent","XMLHttpRequest");
+    request.onreadystatechange = function(){
+        if (request.readyState == 4 && request.status == 200){
+            callback2(request);
+        }
+    }
+    request.send();
+}
  
 function getQuery(){
     var datas = new Array();
