@@ -9,8 +9,11 @@
        <body bgcolor ="tomato">
           <font face="HG丸ｺﾞｼｯｸM-PRO" color ="cornsilk"> 
            <h3><p>うめこおばさんのピザへようこそ!!</p></h3>
-           <p>ログイン完了しました！以下のリンクから注文画面へ進んでください。</p>
-        <a href="pizzashopgae">注文画面へ</a>
-        </font>
+           <p>以下のリンクから注文画面へ進んでください。</p>
+           <ul>
+	        <li><a href="pizzashopgae">注文画面へ</a></li>
+    	    <li><a href="/logout">ログアウト</a></li>
+        	</ul>
+        	</font>
     </body>
 </html>

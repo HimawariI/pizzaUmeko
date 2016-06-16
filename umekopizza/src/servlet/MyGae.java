@@ -44,7 +44,7 @@ private static final long serialVersionUID = 1L;
         if (list != null){
             for(Kutikomi data:list){
                 res += "{id:" + data.getId() + ",name:'" + data.getUserName() +
-                    "',review:'" + data.getReview() + "'},";//",'date:'" + data.getDatetime() + "'},";
+                    "',review:'" + data.getReview() + " ',datetime:'" + data.getDatetime() + "'},";
             }
         }
         res += "]";

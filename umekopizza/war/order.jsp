@@ -15,7 +15,7 @@
         <h1>注文画面</h1>
         <font face="HG丸ｺﾞｼｯｸM-PRO" color ="cornsilk"> 
         <p>注文したいピザの枚数を半角数字で入力してください。</p>
-        <form action="/pizzashopgae" method="post">
+        
             <font face="HG丸ｺﾞｼｯｸM-PRO" color ="black">
             <h2>
         <% if (errorMsg != null) {%>
@@ -70,6 +70,7 @@
 絶対に満足のいくピザであることを保障します。
                     </pre></td></tr>
             </table>
+            <form action="/pizzashopgae" method="post">
             <table>
             <tr><td>お名前:</td><td><input type="text" name="userName"></td></tr>
                 <tr><td>マルゲリータ:</td><td><input type="text" name="pizza1">枚×1500円</td></tr>
@@ -79,8 +80,6 @@
                 <tr><td>ウメコデラックス:</td><td><input type="text" name="pizza5">枚×3500円</td></tr>
                 <tr><td>うめこおばさんの気まぐれピザ:</td><td><input type="text" name="pizza6">枚×3200円</td></tr>
             </table>
-
-			<input type="hidden" id="id" name="id">
             <input type="submit" value="注文確認">
         </form>
        
