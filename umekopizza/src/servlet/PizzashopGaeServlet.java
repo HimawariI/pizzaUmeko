@@ -60,7 +60,7 @@ public class PizzashopGaeServlet extends HttpServlet  {
             	manager.close();
             }
 
-            response.sendRedirect("/check.jsp");
+            response.sendRedirect("/complete.jsp");
         
         }else if(!(pattern.matcher(pizza1).matches()) || !pattern.matcher(pizza2).matches() || !pattern.matcher(pizza3).matches()
                 || !pattern.matcher(pizza4).matches()|| !pattern.matcher(pizza5).matches()|| !pattern.matcher(pizza6).matches()){

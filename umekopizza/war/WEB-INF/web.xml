@@ -59,6 +59,24 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 		<servlet-name>add_linkdata</servlet-name>
 		<url-pattern>/add</url-pattern>
 	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>editKutikomiSevlet</servlet-name>
+		<servlet-class>servlet.EditKutikomiServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>editKutikomiSevlet</servlet-name>
+		<url-pattern>/edit</url-pattern>
+	</servlet-mapping>
+	
+			<servlet>
+		<servlet-name>deleteKutikomiSevlet</servlet-name>
+		<servlet-class>servlet.DeleteKutikomiServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteKutikomiSevlet</servlet-name>
+		<url-pattern>/del</url-pattern>
+	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>LoginServlet</servlet-name>

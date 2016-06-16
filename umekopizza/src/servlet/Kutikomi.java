@@ -12,14 +12,14 @@ public class Kutikomi {
 	private String userName; // ユーザー名
 	@Persistent
 	private String review; // 口コミ内容
-	 //@Persistent
-	    //private Date datetime;//口コミの日付
+	@Persistent
+	private String datetime;//口コミの日付
 
-	public Kutikomi(String userName, String review){//,Date datetime) {
+	public Kutikomi(String userName, String review,String datetime) {
 		super();
 		this.userName = userName;
 		this.review = review;
-		//this.datetime = datetime;
+		this.datetime = datetime;
 	}
 
 	public void setId(Long id) {
@@ -45,12 +45,11 @@ public class Kutikomi {
 	public String getReview() {
 		return review;
 	}
-	/*
-	public Date getDatetime() {
+	public String getDatetime() {
         return datetime;
     }
  
-    public void setDatetime(Date datetime) {
+    public void setDatetime(String datetime) {
         this.datetime = datetime;
-    }*/
+    }
 }

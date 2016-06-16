@@ -43,7 +43,7 @@ private static final long serialVersionUID = 1L;
         String res = "[";
         if (list != null){
             for(Pizza data:list){
-                res += "{id:" + data.getId() + ",name:'" + data.getUserName() +
+                res += /*"{id:" + data.getId() +*/ ",name:'" + data.getUserName() +
                     "',pizza1:'" + data.getPizza1() +",'pizza2:'" + data.getPizza2() +
                     "',pizza3:'" + data.getPizza3() +",'pizza4:'" + data.getPizza4() +
                     "',pizza5:'" + data.getPizza5() +",'pizza6:'" + data.getPizza6() +
